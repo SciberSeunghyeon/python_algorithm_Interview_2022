@@ -15,10 +15,10 @@ class Solution:
         head = head.next
         # Variable initialization
 
-        while curr and curr.next:  # 변수는 prev,curr,next만 사용하기 #아니 대체왜 curr.next 말고 curr도 체크해야 하는 거야??
+        while curr and curr.next:
             # ------------Wall--------------
             prev.next = curr.next
-            curr.next = prev.next.next
+            curr.next = curr.next.next
             prev.next.next = curr
             # ------------Bigger Wall---------
             prev = curr
