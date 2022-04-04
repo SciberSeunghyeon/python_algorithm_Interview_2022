@@ -3,6 +3,7 @@ from ListNode import ListNode
 param_1 = ListNode.convert_from_list(ListNode, [1, 2, 3, 4, 5, 6])
 
 # Started at Mon Apr  4 23:11:43 KST 2022
+# Finished at Tue Apr  5 00:22:47 KST 2022
 """
 My Idea : make two heads, 'odd' and 'even' respectively. and just attach two!
 """
