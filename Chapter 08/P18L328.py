@@ -26,16 +26,17 @@ class Solution:
             else:
                 even_current.next = head
                 even_current = even_current.next
-            head = head.next
-            counter += 1
+            head = head.next; counter += 1  # stupidly forgotten point 1.
+            # -_-YOU SHOULD MOVE HEAD ptr FORWARD, AFTER PROCESSING NODE!!
 
-        odd_current.next = None
-        even_current.next = None
+        odd_current.next = None; even_current.next = None  # SPF 2
+        # -_-IF NOT, INFINITE LOOP EMERGES. [1, 3, 5, 2, 4 but 4 points 5 then infloop
         odd_current.next = even_head
 
         print(f'Counter = {counter}')
 
         return odd_head
+
 
 param_1.traverse()
 
