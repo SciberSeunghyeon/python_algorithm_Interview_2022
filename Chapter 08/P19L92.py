@@ -18,15 +18,17 @@ class Solution:
     def reverseBetween(self, head, left: int, right: int):
         if not head or left == right:
             return head
-
+        # Preproc. of case len == 0 or 1
         if not head.next.next:
             head.next.next = head
             head = head.next
             head.next.next = None
             return head
-        # Preprocessing!! of case length is 0, 1, 2 All Done
+        # Preproc. of case len == 2
 
-        left_fisher = real_head_before = ListNode(next = head) #DUMMY!!!!! in case of left = 1
+        # from this, only cases of len <= 3
+        left_fisher = real_head_before = ListNode(next = head)
+        #DUMMY!! for left fisher, in case of pulling nodes to position 1. it copes with case left == 1
         for i in range(left - 1):
             left_fisher = left_fisher.next
         bef = left_fisher.next
@@ -38,7 +40,8 @@ class Solution:
             left_fisher.next = pull
             bef.next = tmp
 
-            pull, tmp = tmp, tmp.next if tmp else None #See You Next Day, Just My Intuition. and Let's study about Ternary Operators from Python
+            pull, tmp = tmp, tmp.next if tmp else None # It copes with case (right == last_no).
+            #Ternary Operators from Python
 
         return real_head_before.next
 
