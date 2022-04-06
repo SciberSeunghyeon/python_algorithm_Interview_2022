@@ -1,34 +1,33 @@
-# Started at Tue Apr  5 23:38:38 KST 2022
-# Finished at Wed Apr  6 00:19:56 KST 2022
-"""
-My Idea : Why do we learn algorithms, SH? So we can gain insights of the problem, and learn to make up solutions.
-Python List is a perfect implementation of Stack ADT
-"""
-"""
-What I Learned : Python doesn't have switch-case syntax. it can be substituted with if-else syntax or DICTIONARY.
-"""
+#from ~ import ~
 
-param_1 = "]]"
+param_1 = "bcabc"
+
+# Started at Wed Apr  6 22:48:53 KST 2022
+# Finished at
+"""
+My Idea : Every Letter *appear* ONCE, and only ONCE.
+모든 문자는 lowercase alphabet이다. 
+문자를 하나씩 검사하면서 
+밸류가 작은 문자가 무적권 앞으로 가야
+밸류가 큰 문자는 가능한 한 뒤로 가야
+bcabc
+b 1
+b1 c2
+b1 c2 a3
+b1 c2 a3 b4 c5
+c1 b2 a3 c4 d5 c6 b7 c8
+stack = b c a b c
+
+"""
+"""
+What I Learned : 
+"""
 
 
 class Solution:
-    def isValid(self, s: str) -> bool:
-        if len(s) % 2 != 0: return False #preproc. it can be useless w.r.t. inputs.
+    class Solution:
+        def removeDuplicateLetters(self, s: str) -> str:
+            stack = []
+            pass
 
-        stack = []
-        parentheses_dict = {')':'(', '}':'{', ']':'['}
-
-        for elem in s:
-            if elem in ('(', '{', '['):
-                stack.append(elem)
-            else:
-                if (not stack) or parentheses_dict[elem] != stack.pop(): return False
-                #(No stack content to pair with element) or (stack content doesn't match with element)
-                # elem = ), stack.pop() -> None or {, [ #Missed Point
-
-        if stack:
-            return False
-        else:
-            return True
-
-print(Solution.isValid(Solution, param_1))
+print(Solution.function(Solution, param_1))
