@@ -4,7 +4,8 @@ class ListNode:
         self.val = val
         self.next = next
 
-    def convert_from_list(self, lis):
+    @classmethod
+    def convert_from_list(cls, lis):
         head = curr = ListNode(val=lis[0])
         for idx in range(1, len(lis)):
             curr.next = ListNode(val=lis[idx])

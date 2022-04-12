@@ -1,6 +1,6 @@
 from ListNode import ListNode
 
-param_1 = ListNode.convert_from_list(ListNode, [1,2,3,4,5])
+param_1 = ListNode.convert_from_list([1,2,3,4,5])
 
 # Started at Tue Apr  5 00:32:34 KST 2022
 # Finished at
