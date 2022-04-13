@@ -1,3 +1,8 @@
+
+# What I've learned: BAN LINKED LIST; Python has list, dic, set, deque, str...
+# and of course, I have to stop and find another plan, if one approach seems to not be the way.
+
+
 """
 class Node:
     def __init__(self, val = None, next = None):
