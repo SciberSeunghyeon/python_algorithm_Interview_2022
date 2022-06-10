@@ -24,8 +24,8 @@ class Solution:
         l = 0
         
         for r, char in enumerate(s):
-            while char in used:
-                used.remove(s[l])
+            while char in used: # delete until no duplicates.
+                used.remove(s[l]) # delete left character.
                 l += 1
             used.add(char)
             max_length = max(max_length, r-l+1)
